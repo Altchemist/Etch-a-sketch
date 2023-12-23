@@ -9,7 +9,8 @@
     width:800px;
     height: 800px;
     display: flex;
-    background-color: firebrick;
+    flex-direction: column;
+    border: 0.5px solid #000;
     flex:auto;
 }
 
