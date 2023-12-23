@@ -1,9 +1,14 @@
 let currentColor = "black";
 
+
 function createGrid(gridSize)
 {
     const grid = document.getElementById("grid");
 
+    while(grid.lastElementChild){
+        grid.removeChild(grid.lastElementChild);
+    }
+    
     let squareSideLength=800/gridSize;
 
     numberOfContainers=gridSize
