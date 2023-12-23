@@ -42,3 +42,13 @@ function createGrid(gridSize)
         }
     }
 }
+
+function clearGrid(){
+    const allSquares = document.getElementsByClassName("grid-square");
+
+    for(square of allSquares){
+        square.style.backgroundColor = "transparent";
+    }
+}
+
+createGrid(16);
