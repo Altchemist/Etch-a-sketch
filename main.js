@@ -45,7 +45,8 @@ function createGrid(gridSize)
     }
 }
 
-function clearGrid(){
+function clearGrid()
+{
     const allSquares = document.getElementsByClassName("grid-square");
 
     for(square of allSquares){
@@ -53,10 +54,18 @@ function clearGrid(){
     }
 }
 
-function setColors(color){
+function setColors(color)
+{
     currentColor=color;
 }
 
+function randomColors(){
+    let r = Math.floor(Math.random()*256);
+    let g = Math.floor(Math.random()*256);
+    let b = Math.floor(Math.random()*256);
+
+    currentColor = `rgb(${r},${g},${b})`;
+}
 
 // Default grid creation
 createGrid(32);
