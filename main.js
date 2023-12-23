@@ -1,3 +1,5 @@
+let currentColor = "black";
+
 function createGrid(gridSize)
 {
     const grid = document.getElementById("grid");
@@ -36,8 +38,8 @@ function createGrid(gridSize)
             Object.assign(square.style, squareStyle);
             square.style.backgroundColor
             square.classList.add("grid-square");
-            square.addEventListener("mouseover", ()=>{
-                square.style.backgroundColor="black";
+            square.addEventListener("mouseover", function(){
+                square.style.backgroundColor = currentColor;
             })
         }
     }
@@ -51,4 +53,10 @@ function clearGrid(){
     }
 }
 
-createGrid(16);
+function setColors(color){
+    currentColor=color;
+}
+
+
+// Default grid creation
+createGrid(32);
