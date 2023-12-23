@@ -1,5 +1,5 @@
 let currentColor = "black";
-
+let enableRainbow = false;
 
 function createGrid(gridSize)
 {
@@ -46,6 +46,9 @@ function createGrid(gridSize)
             square.addEventListener("mouseover", function(){
                 square.style.backgroundColor = currentColor;
             })
+            square.addEventListener("mouseout", function(){
+                if(enableRainbow){randomColors();}
+            })
         }
     }
 }
@@ -61,6 +64,7 @@ function clearGrid()
 
 function setColors(color)
 {
+    enableRainbow = false;
     currentColor=color;
 }
 
@@ -70,6 +74,10 @@ function randomColors(){
     let b = Math.floor(Math.random()*256);
 
     currentColor = `rgb(${r},${g},${b})`;
+}
+
+function rainbowHovering(){
+    enableRainbow = true;
 }
 
 // Default grid creation
