@@ -1,5 +1,8 @@
 let currentColor = "black";
-let enableRainbow = false;
+let isRainbow = false;
+let progressiveDarkening = false;
+
+let fixedColor = false;
 
 function createGrid(gridSize) {
     const grid = document.getElementById("grid");
@@ -39,11 +42,22 @@ function createGrid(gridSize) {
             Object.assign(square.style, squareStyle);
             square.style.backgroundColor
             square.classList.add("grid-square");
+            
             square.addEventListener("mouseover", function () {
+                if(fixedColor == true){
                 square.style.backgroundColor = currentColor;
+                }
             })
+            
             square.addEventListener("mouseout", function () {
-                if (enableRainbow == true) { randomColors(); }
+                if (isRainbow == true) { randomColors(); }
+            })
+
+            square.addEventListener("mouseover", function(){
+                if (progressiveDarkening == true){
+                    darkness-=10
+                    square.style.backgroundColor = `hsl(0,100%,${darkness}%)`;
+                }
             })
         }
     }
@@ -70,9 +84,11 @@ function randomColors() {
     currentColor = `rgb(${r},${g},${b})`;
 }
 
-function rainbowHovering() {
+function enableRainbow() {
     enableRainbow = true;
 }
+
+f
 
 // Default grid creation
 createGrid(32);
