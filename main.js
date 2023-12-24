@@ -88,11 +88,11 @@ function randomColors() {
 }
 
 function enableRainbow() {
-    enableRainbow = true;
+    isRainbow = true;
 }
 
 function disableRainbow(){
-    enableRainbow = false;
+    isRainbow = false;
 }
 
 function enableDarkening(){
@@ -103,6 +103,16 @@ function disableDarkening(){
     progressiveDarkening = false;
 }
 
+promptButton = document.getElementById("promptSize")
+
+promptButton.addEventListener("click", ()=>{
+    let size=prompt("Enter the size of the grid [Cannot exceed 100]");
+    while(size>100)
+    {
+        size=prompt("Enter the size of the grid [Cannot exceed 100]")
+    }
+    createGrid(size);
+})
 
 // Default grid creation
 createGrid(32);
