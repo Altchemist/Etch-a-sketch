@@ -2,7 +2,7 @@ let currentColor = "black";
 let isRainbow = false;
 let progressiveDarkening = false;
 
-let fixedColor = false;
+let fixedColor = true;
 
 function createGrid(gridSize) {
     const grid = document.getElementById("grid");
@@ -42,6 +42,7 @@ function createGrid(gridSize) {
             Object.assign(square.style, squareStyle);
             square.style.backgroundColor
             square.classList.add("grid-square");
+            square.dataset.darkness = 60;
             
             square.addEventListener("mouseover", function () {
                 if(fixedColor == true){
@@ -53,10 +54,11 @@ function createGrid(gridSize) {
                 if (isRainbow == true) { randomColors(); }
             })
 
+            
             square.addEventListener("mouseover", function(){
                 if (progressiveDarkening == true){
-                    darkness-=10
-                    square.style.backgroundColor = `hsl(0,100%,${darkness}%)`;
+                    square.dataset.darkness -= 10;
+                    square.style.backgroundColor = `hsl(240, 100%, ${square.dataset.darkness}%)`
                 }
             })
         }
@@ -68,11 +70,12 @@ function clearGrid() {
 
     for (square of allSquares) {
         square.style.backgroundColor = "transparent";
+        square.dataset.darkness = 50;
     }
 }
 
 function setColors(color) {
-    enableRainbow = false;
+    disableRainbow();
     currentColor = color;
 }
 
@@ -88,7 +91,18 @@ function enableRainbow() {
     enableRainbow = true;
 }
 
-f
+function disableRainbow(){
+    enableRainbow = false;
+}
+
+function enableDarkening(){
+    progressiveDarkening = true;
+}
+
+function disableDarkening(){
+    progressiveDarkening = false;
+}
+
 
 // Default grid creation
 createGrid(32);
