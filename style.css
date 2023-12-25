@@ -3,6 +3,7 @@
     text-align: center;
     font-size:larger;
     width: 100rem;
+    color: #7FFFD4;
 }
 
 #grid{
@@ -24,4 +25,8 @@ body{
     flex-direction: column;
     justify-content: center;
     flex:auto;
+}
+
+#grid-and-settings{
+    display: flex;
 }
