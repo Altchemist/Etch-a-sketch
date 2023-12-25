@@ -35,3 +35,64 @@ body{
     font-family: monospace;
     font-size: 13px;
 }
+
+.button{
+    margin: 4px;
+    border-radius: 12px;
+    background-color: whitesmoke;
+    color: black;
+    box-shadow: 5px 5px 5px grey;
+}
+
+#black{
+    border: 1px solid black;
+    transition-duration: 0.5s;
+}
+
+#black:hover{
+    background-color: black;
+    color: white;
+}
+
+#red{
+    border: 1px solid red;
+    color: red;
+    transition-duration: 0.5s;
+}
+
+#red:hover{
+    background-color: red;
+    color: white;
+}
+
+#green{
+    border: 1px solid green;
+    color: green;
+    transition-duration: 0.5s;
+}
+
+#green:hover{
+    background-color: green;
+    color: white;
+}
+
+#blue{
+    border: 1px solid blue;
+    color: blue;
+    transition-duration: 0.5s;
+}
+
+#blue:hover{
+    background-color: blue;
+    color: white;
+}
+
+#rainbow{
+    border: 1px solid transparent;
+    background-image: linear-gradient(to left, violet, indigo, blue, green , yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition-duration: 0.5s;
+}
+
+
