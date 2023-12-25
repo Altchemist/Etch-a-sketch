@@ -29,5 +29,9 @@ body{
 #grid-and-settings{
     display: flex;
     justify-content: space-around;
+}
 
+.subtitle{
+    font-family: monospace;
+    font-size: 13px;
 }
