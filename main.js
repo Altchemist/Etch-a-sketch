@@ -114,5 +114,35 @@ promptButton.addEventListener("click", ()=>{
     createGrid(size);
 })
 
+const blackButton = document.getElementById("black")
+const redButton = document.getElementById("red")
+const greenButton = document.getElementById("green")
+const blueButton= document.getElementById("blue")
+const rainbowButton = document.getElementById("rainbow")
+
+blackButton.addEventListener("click", ()=>{
+    disableRainbow();
+    setColors("black");
+})
+
+redButton.addEventListener("click", ()=>{
+    disableRainbow();
+    setColors("red");
+})
+
+greenButton.addEventListener("click",()=>{
+    setColors("green");
+})
+
+blueButton.addEventListener("click", ()=>{
+    disableRainbow();
+    setColors("blue");
+})
+
+rainbowButton.addEventListener("click", ()=>{
+    enableRainbow();
+})
+
 // Default grid creation
-createGrid(32);
+createGrid(16);
+
