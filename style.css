@@ -1,9 +1,9 @@
 #banner{
     font-family:monospace;
     text-align: center;
-    font-size:larger;
+    font-size:22px;
     width: 100rem;
-    color: #7FFFD4;
+    color: #DC143C;
 }
 
 #grid{
@@ -12,7 +12,6 @@
     border: 0.5px solid #000;
     display: flex;
     flex-direction: column;
-    flex:none;
 }
 
 body{
@@ -30,4 +29,5 @@ body{
 #grid-and-settings{
     display: flex;
     justify-content: space-around;
+
 }
