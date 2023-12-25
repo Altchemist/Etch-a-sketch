@@ -18,13 +18,6 @@ body{
     background-color: beige;
 }
 
-#scaling{
-    width: 100rem;
-    height: 5rem;
-    display: flex;
-    background-color: azure;
-    flex:auto;
-}
 
 #main-container{
     display: flex;
