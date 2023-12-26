@@ -79,7 +79,9 @@ function clearGrid() {
 function setColors(color) {
     disableRainbow();
     disableDarkening();
+
     currentColor = color;
+    resetDarkness()
     hue = calculateHue();
 }
 
@@ -142,6 +144,14 @@ function calculateHue(){
     console.log(calculatedHue);
     
     return calculatedHue; 
+}
+
+function resetDarkness(){
+    const allSquares = document.getElementsByClassName("grid-square");
+
+    for (square of allSquares) {
+        square.dataset.darkness = 50;
+    }
 }
 
 function enableRainbow() {
