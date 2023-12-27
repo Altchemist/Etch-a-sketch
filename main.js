@@ -189,6 +189,8 @@ const rainbowButton = document.getElementById("rainbow")
 
 const progressiveDarkeningButton = document.getElementById("progressiveDarkening");
 
+const clearButton = document.getElementById("clear");
+
 blackButton.addEventListener("click", ()=>{
     disableRainbow();
     setColors("black");
@@ -215,6 +217,8 @@ rainbowButton.addEventListener("click", ()=>{
 progressiveDarkeningButton.addEventListener("click", ()=>{
     enableDarkening();
 })
+
+clearButton.addEventListener("click", clearGrid);
 
 // Default grid creation
 createGrid(16);
